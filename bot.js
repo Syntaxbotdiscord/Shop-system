@@ -1,21 +1,16 @@
-//By mrzizx
-//جميع الحقوق محفوضة
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const jimp = require("jimp");// npm i jimp
-const package = ('package.json');
-const yt = require('ytdl-core');
-const prefix = ("--")
-const child_process = require("child_process");
-const ownerid = ('280749272498962432')
-const canvas = require("canvas");
-const fs = require('fs')
-const moment = require("moment");
 
+client.on('ready', () => {
+    console.log('I am ready!');
+});
 
-console.log("By Mrzizx");
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.reply('pong');
+  	}
+});
 
-client.login(process.env.BOT_TOKEN);
 
 
 client.on('ready', async () => {
@@ -25,7 +20,7 @@ client.on('ready', async () => {
 
 
 
-
+client.login(process.env.BOT_TOKEN);
 
 
 client.on('message', message => {
