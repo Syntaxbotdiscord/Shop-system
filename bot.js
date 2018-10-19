@@ -1,7 +1,7 @@
 //By mrzizx
 //جميع الحقوق محفوضة
 const Discord = require('discord.js');
-const Rocket = new Discord.Client();
+const client = new Discord.Client();
 const jimp = require("jimp");// npm i jimp
 const package = ('package.json');
 const yt = require('ytdl-core');
