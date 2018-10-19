@@ -13,25 +13,63 @@ const fs = require('fs')
 const moment = require("moment");
 
 
-console.log("By Fares");
-
-Rocket.on('ready', () => {//source
-    console.log('╔[════════════════════════════════════]╗');
-    console.log('')
-    console.log('            ╔[════════════]╗')
-    console.log('              Bot Is Online')
-    console.log('            ╚[════════════]╝')
-    console.log('')
-    console.log(`Logged in as ${Rocket.user.tag}!`);
-    console.log('')
-    console.log(`servers! [ " ${Rocket.guilds.size} " ]`);
-    console.log('')
-    console.log(`Users! [ " ${Rocket.users.size} " ]`);
-    console.log('')
-    console.log('╚[════════════════════════════════════]╝')
-  });
+console.log("By Mrzizx");
 
 client.login(process.env.BOT_TOKEN);
+
+
+client.on('ready', async () => {
+    console.log(`${client.user.username} has logged in.`);
+    client.user.setActivity('--help|Em-Store', {type: 'LISTENING'});
+});
+
+
+
+
+
+
+client.on('message', message => {
+     if (message.content === "--help") {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **--id**  ' ,' **معلومــات عــن حســابــك** ')
+.addField('     **--server** ' ,' ** معلومات عن السيرفر**')
+.addField('     **--avatar** ' , '**صورتك في الدسكورد أو صورة الشخص المذكور**')
+.addField('     **--كت تويت** ' , '**ل اظهار كت تويت**')
+.addField('     **--kick ** ' ,' ** للطرد  ** ')
+.addField('     **--ban** ' , '**لـ اعطاء بان للعضو** ')
+.addField('     **--bc ** ' ,' ** للبرودكاست ** ')
+.addField('     **--clear** ' , '**لـ مسح الشات** ')
+.addField('للأستفسار أو الرد على أسئلتكم وأفكـــاركم كلمني على الديسكورد ' , '**!_ٍٍٍ"Mrzizx"#5157**')
+.setColor('RANDOM')
+  message.channel.sendEmbed(embed);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
