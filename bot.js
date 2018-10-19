@@ -13,7 +13,7 @@ client.on('message', message => {
 
 client.login(process.env.BOT_TOKEN);
 
-
+const prefix = '--';
 
 client.on('message', async message => {
   if(message.author.bot) return;
